@@ -55,7 +55,8 @@ int main() {
 	   typedef opengm::CombiLP<GraphicalModelType,opengm::Minimizer,TRWSiSolverType> CombiLPType;
 	   CombiLPType::Parameter param;
 	   param.lpsolverParameter_.maxNumberOfIterations_=100;
-	   param.lpsolverParameter_.decompositionType()=TRWSiSolverType::Storage::GENERALSTRUCTURE;
+	   param.verbose_=true;
+	   param.lpsolverParameter_.verbose()=true;
 	   minTester.test<CombiLPType>(param);
    }
 

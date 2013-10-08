@@ -19,7 +19,8 @@ struct TRWSi_Parameter : public trws_base::MaxSumTRWS_Parameters<typename GM::Va
 			        bool verbose=false)
 	:parent(maxIternum,precision,absolutePrecision),
 	 decompositionType_(decompositionType),
-	 verbose_(verbose){}
+	 verbose_(verbose)
+{}
 
 	typename Storage::StructureType decompositionType_;
 	bool verbose_;
